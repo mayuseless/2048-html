@@ -1,0 +1,148 @@
+/* 背景图片 */
+#body {
+    background:url("../img/background2.jpg")  no-repeat center center;   /*加载背景图  背景图不平铺 */
+    background-size:cover;  /* 让背景图基于容器大小伸缩 */
+    background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定   此条属性必须设置否则可能无效*/
+    background-color:#CCCCCC;   /* 设置背景颜色，背景图加载过程中会显示背景色,浅灰色 */
+}
+
+
+
+/* 2048标签 */
+#mystyle{
+    width: 100px;
+    height: 170px;
+    padding: 10px;
+    background-color: rgba(240, 200 , 30 , 0.8);
+    border-radius: 10px;
+
+    position:absolute;
+    left: 25px;
+    top: 50px;
+}
+/*
+padding 内边距与div
+margin 外边距与div
+
+<!-- rgb 三原颜色 , rgba 透明度 , border-radius圆角(半径) -->
+<div style="width: 120px; height: 120px; background-color: rgba(240, 200 , 30 , 0.8); border-radius: 10px">
+
+class属性：
+.mystyle 为 class属性 调用
+
+id选择器:(如position:absolute,唯一位置)
+#mystyle 为 id选择器 调用 不能重复,防止选定时候有歧义
+
+position:absolute;绝对位置相对于页面
+此外,相对位置,相对于上一级div
+ */
+
+
+/* 文字 */
+.big{
+    font-size: 35px;
+}
+.small{
+    font-size: 20px;
+}
+.button-cell{
+    font-family: sans-serif;/* 字体类型 */
+    font-weight: bold;/* 字体加粗 */
+    text-align: center;/* 字体居中 */
+    color: white;
+}
+
+
+/* 蓝色格子分数 */
+#score-cell{
+    width: 100px;
+    height: 70px;
+    padding: 10px;
+    background-color: rgba( 25 , 130 , 240 , 0.8);
+    border-radius: 10px;
+
+    position: absolute;
+    left: 155px;
+    top: 50px;
+}
+#high-score-cell{
+    width: 100px;
+    height: 70px;
+    padding: 10px;
+    background-color: rgba( 25 , 130 , 240 , 0.8);
+    border-radius: 10px;
+
+    position: absolute;
+    left: 155px;
+    top: 150px;
+}
+
+
+/* 重新开始 */
+#new-game{
+    width: 230px;
+    height: 20px;
+    padding: 10px;
+    background-color: rgba(250 , 150 , 60 , 0.8);
+    border-radius: 10px;
+
+    position: absolute;
+    left: 25px;
+    top: 250px;
+
+    text-decoration: none; /* 下划线 */
+    text-align: center;
+    font-family: sans-serif;/* 字体类型 */
+    color: white;
+}
+/* 鼠标放置按钮动作 */
+#new-game:hover{
+    background-color: rgb(250 , 150 , 60 );
+}
+
+
+/* 十六个内层小格子的父容器 */
+#gird-container{
+    width: 460px;
+    height: 460px;
+    padding: 20px;
+    background-color: rgba(140 , 180 , 210 , 0.5 );
+    border-radius: 10px;
+
+    /*
+    margin: 5px auto;
+    margin 有四个参数 上,左,下,右
+    外边距 + 自动设置协调位置
+    position: relative;
+    top: 50px;
+     */
+
+    position: absolute;
+    top: 50px;
+    left: 720px;
+}
+/* 十六个内层小格子 */
+.grid-cell{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background-color: rgba(160 , 200 , 245 , 0.7 );
+
+    position: absolute;
+}
+/* 导入数字颜色 */
+.num-cell{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    /*background-color: #fff2cc;*/
+
+    position: absolute;
+
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 100px;/* 行间距 */
+    /*color: #59593d;*/
+}
